@@ -1,0 +1,19 @@
+# Build artifacts
+/target
+
+# Runtime directories
+kafka-exports/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Test files
+test_config.sh

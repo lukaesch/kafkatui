@@ -1,0 +1,33 @@
+# Example configuration file for kafkatui
+# Place this file at ~/.config/kafkatui/config.yaml
+
+profiles:
+  production:
+    broker: "prod-kafka.example.com:9092"
+    user: "prod-user"
+    password: "${PROD_KAFKA_PASSWORD}"  # Will read from environment variable
+    schema_registry: "https://prod-schema-registry.example.com:8081"
+    favorite_topics:
+      - orders
+      - payments
+      - users
+      - events
+  
+  staging:
+    broker: "staging-kafka.example.com:9092"
+    user: "staging-user"
+    password: "${STAGING_KAFKA_PASSWORD}"
+    schema_registry: "https://staging-schema-registry.example.com:8081"
+    favorite_topics:
+      - test-orders
+      - test-payments
+  
+  local:
+    broker: "localhost:9092"
+    user: "local-user"
+    password: "local-password"
+    favorite_topics:
+      - local-topic-1
+      - local-topic-2
+
+recent_connections: []  # Will be populated automatically
